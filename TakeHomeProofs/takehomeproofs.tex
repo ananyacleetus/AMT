@@ -1,0 +1,140 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amsmath,amsthm,amssymb}
+\newtheorem{thm}{Theorem}
+
+\begin{document}
+
+\title{Vector Project}
+
+\author{Ananya Cleetus}
+
+\date{\today}
+
+
+
+\maketitle
+
+\section{Converting Latitude and Longitude to Cartesian Coordinates }
+
+To convert from latitude and longitude to cartesian coordinates, first convert the longitude and latitude to radians. 
+
+\begin{center}
+\textbf{Latitude (in radians) is Latitude (in degrees) *$\frac{\Pi}{180}$}\\
+\textbf{Longitude (in radians) is Longitude (in degrees) *$\frac{\Pi} {180}$}\\
+\end{center}
+
+Since the $z$-coordinate of Cartesian coordinates goes in the direction of the poles, to find the $z$-coordinate, simply multiply the radius of the Earth by the sine of the latitude in radians. This is because given a triangle using the latitude as the angle measure, the side of the triangle being the radius of the Earth would need to be multiplied by the sine of the angle to yield the change or height in the $x$-direction.
+
+\section{Finding the Distance Between Two Points on the Earth’s Surface}
+
+\begin{proof}
+
+ Let $a \in \mathbb{Z}$ where $a$ = 2$k$ +1. Therefore,
+
+
+
+  By the definition of odd, $a^2+3a+5$ is odd \\
+ 
+\end{proof}
+
+
+\begin{proof}
+
+ Contradiction: If $a^2 + b^2$ = $c^2 $, then $a$ and $b$ are odd.\\
+Let $a$ = 2$k$ +1 and $b$ = 2$j$ +1 where $a,b,c,k$ and $j \in \mathbb{Z}$. Therefore,
+  \begin{align*}
+    a^2 + b^2 &= (2k+1)^2 + (2j+1)^2\\
+    &= 4k^2 + 4k +1 + 4j^2 + 4j +1 \\
+    &= 4k^2 + 4k  + 4j^2 + 4j +2 \\
+    &= 4(k^2 + j^2 + k + j) + 2 \\
+  \end{align*}
+  Case 1: $c$ is odd \\
+  Since odd numbers are closed under multiplication, if $c$ is odd, $c^2$ must be odd \\
+  \begin{align*}
+  c^2 &= a^2 + b^2 \\
+  &= 4(k^2 + j^2 + k + j) + 2 \\
+  &= 2(2k^2 + 2j^2 + 2k + 2j +1) \\
+  \end{align*}
+  By the definition of even, $c^2$ and $c$ cannot be odd\\\linebreak 
+  Case 2: $c$ is even\\
+  Let $c$ = 2$k$\\
+  \begin{align*}
+c^2 &= (2k)^2  \\
+&=4k^2\\
+\end{align*}
+If $c$ is divisible by 2, $c^2$ must be divisible by 4. \\
+However, $a^2$ + $b^2$ is $4(k^2 + j^2 + k  + j)  2$, indicating that $c^2$ is not divisible by 4. \\Here is a contradiction. \\Therefore, either $a$ or $b$ must be even. \\
+\end{proof}
+
+
+\begin{proof}
+Contrapositive: If 3 divides $n$, then 3 divides $n^2$ \\
+Let $n$ be $3k$, $k \in \mathbb{Z}$. Therefore, 
+\begin{align*}
+n^2 &= (3k)^2\\
+&= 9k^2\\
+&=3(3k^2)\\
+\end{align*}
+Therefore, $n^2$ is divisible by 3, proving the contrapositive true. Therefore, the original assumption is true.\\
+\end{proof}
+
+
+\begin{proof}
+Conjecture: $b = 7$. \\
+$P(n) = 9^n + 7 = 8m$ where $ m \in \mathbb{Z}$\\
+\begin{align*}
+P(1) &= 9^1 +7\\
+&= 9 + 7\\ 
+&= 16 \\
+&= 8(2)\\
+\end{align*}
+\linebreak\linebreak\linebreak\linebreak\linebreak\linebreak\linebreak\linebreak
+Assume: $ P(k) = 9^k + 7 = 8h$ where $ h \in \mathbb{Z}$\\
+Prove: $P(k+1) = 9^{k+1} + 7 = 8f$ where $f \in \mathbb{Z}$\\
+\begin{align*}
+9^{k+1} + 7 &= 8f\\
+9^k * 9^1 + 7 &= 8f\\
+9*9^k + 7 &= 8f \\
+9(8h-7) + 7 &= 8f \tag*{Substituting from P(k)}\\
+72h - 63 + 7 &= 8f\\
+72h - 56 &= 8f\\
+8(9h -8) &= 8f\\
+\end{align*}
+Since $P(1)$ and $P(k+1)$ are true given $P(k)$, $P(n)$ is true using mathematical induction. \\ 
+
+\end{proof}
+
+\begin{proof} 
+$P(n) =\frac{1}{(1)(3)} + \frac{1}{(3)(5)} + \frac{1}{(5)(7)} + ... +\frac{1}{(2n-1)(2n+1)} = \frac{n}{2n+1} $\\
+\begin{align*}
+P(1) &= \frac{1}{(2(1)-1)(2(1)+1)} = \frac{(1)}{(2(1)+1)} \\
+&= \frac{1}{(2-1)(2+1)} = \frac{1}{(2+1)}\\
+&=\frac{1}{(1)(3)} = \frac{1}{3}\\
+&= \frac{1}{3} = \frac{1}{3}\\
+\end{align*}
+Assume: $P(k) = \frac{1}{(1)(3)} + \frac{1}{(3)(5)} + \frac{1}{(5)(7)} + ... +\frac{1}{(2k-1)(2k+1)} = \frac{k}{2k+1} $\\
+Prove: $P(k+1) = \frac{1}{(1)(3)} + \frac{1}{(3)(5)} + \frac{1}{(5)(7)} + ... +\frac{1}{(2(k+1)-1)(2(k+1)+1)} = \frac{(k+1)}{2(k+1)+1} $\\
+\begin{align*}
+\frac{1}{(1)(3)} + \frac{1}{(3)(5)} + \frac{1}{(5)(7)} + ... +\frac{1}{(2(k+1)-1)(2(k+1)+1)} &= \frac{(k+1)}{2(k+1)+1}\\
+\frac{1}{(1)(3)} + \frac{1}{(3)(5)} + \frac{1}{(5)(7)} + ... +\frac{1}{(2k+2-1)(2k+2+1)} &= \frac{(k+1)}{2(k+1)+1}\\
+\frac{1}{(1)(3)} + \frac{1}{(3)(5)} + \frac{1}{(5)(7)} + ... +\frac{1}{(2k+1)(2k+3)} &= \frac{(k+1)}{2(k+1)+1}\\
+\intertext{Including previous term of sequence:}\\
+\frac{1}{(1)(3)} + \frac{1}{(3)(5)} + \frac{1}{(5)(7)} + ... +\frac{1}{(2k-1)(2k+1)}+\frac{1}{(2k+1)(2k+3)} &= \frac{(k+1)}{2(k+1)+1} \\
+\intertext{Substituting from P(k):}\\
+\frac{k}{2k+1} + \frac{1}{(2k+1)(2k+3)} &= \frac{(k+1)}{2(k+1)+1} \\
+\frac{(k)(2k+3)}{(2k+1)(2k+3)} + \frac{1}{(2k+1)(2k+3)} &= \frac{(k+1)}{2(k+1)+1}\\
+\frac{(k)(2k+3) + 1}{(2k+1)(2k+3)} &= \frac{(k+1)}{2(k+1)+1}\\
+\frac{2k^2 +3k +1}{4k^2 + 2k + 6k + 3} &= \frac{(k+1)}{2(k+1)+1}\\
+\frac{(2k+1)(k+1)}{(2k+1)(2k+3)}&= \frac{(k+1)}{2(k+1)+1}\\
+\frac{(k+1)}{(2k+3)}&= \frac{(k+1)}{2(k+1)+1}\\
+\frac{(k+1)}{(2k+2 +1)} &= \frac{(k+1)}{2(k+1)+1}\\
+\frac{(k+1)}{2(k+1) +1} &= \frac{(k+1)}{2(k+1)+1}\\
+\end{align*}
+Since $P(1)$ and $P(k+1)$ are true given $P(k)$, $P(n)$ is true using mathematical induction. \\
+\end{proof}
+\end{document}
